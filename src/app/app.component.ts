@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cltv';
+  isCollapsed = true
+  router
+  constructor(location: Location,private Router: Router){
+    this.router = location;
+  }
+  
+  receiveMessage($event) {
+    if($event == 'false'){
+     this.isCollapsed = false
+    }else{
+     this.isCollapsed = true
+    }
+   }
 }
