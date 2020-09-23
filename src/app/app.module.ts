@@ -16,6 +16,10 @@ import { DataTablesModule } from 'angular-datatables';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { DragComponent } from './drag/drag.component';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { DragComponent } from './drag/drag.component';
     DashboardComponent,
     SidenavComponent,
     NavComponent,
-    DragComponent
+    DragComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ import { DragComponent } from './drag/drag.component';
     DataTablesModule,
     DragDropModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
   ],
   providers: [],
