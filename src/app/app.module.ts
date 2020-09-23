@@ -13,6 +13,9 @@ import { NavComponent } from './nav/nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DataTablesModule } from 'angular-datatables';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragComponent } from './drag/drag.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,8 @@ import { DataTablesModule } from 'angular-datatables';
     LoginComponent,
     DashboardComponent,
     SidenavComponent,
-    NavComponent
-    
-    
+    NavComponent,
+    DragComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,10 @@ import { DataTablesModule } from 'angular-datatables';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    DataTablesModule
+    DataTablesModule,
+    DragDropModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
